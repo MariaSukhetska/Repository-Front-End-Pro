@@ -7,7 +7,7 @@ if (number.length === 3 && !isNaN(number)) {
 
   if (a === b && b === c) {
     alert(" All digits are the same.");
-  } else if (a === b, a === c, b === c) {
+  } else if (a === b || a === c || b === c) {
     alert(" Some digits are the same.");
   } else {
     alert("All digits are different.");
