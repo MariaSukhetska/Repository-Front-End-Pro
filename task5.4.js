@@ -1,27 +1,3 @@
-/*let number = parseInt(prompt("Enter an integer:"));
-
-if (!isNaN(number)) {
-    if (number <= 1) {
-        console.log(`${number} is NOT a prime number.`);
-    } else {
-        let isPrime = true;
-
-        for (let i = 2; i <= Math.sqrt(number); i++) {
-            if (number % i === 0) {
-                isPrime = false;
-                break;
-            }
-        }
-
-        if (isPrime) {
-            console.log(`${number} is a prime number.`);
-        } else {
-            console.log(`${number} is NOT a prime number.`);
-        }
-    }
-} else {
-    console.log("Please enter a correct number.");
-}*/
 let number = parseInt(prompt("Enter an integer:"));
 
 if (!isNaN(number)) {
@@ -48,5 +24,5 @@ if (!isNaN(number)) {
         }
     }
 } else {
-    console.log("Please enter a valid integer.");
+    console.log("Please enter a correct integer.");
 }
