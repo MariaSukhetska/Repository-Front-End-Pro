@@ -1,0 +1,21 @@
+let str = "Maria";             
+let num = 23;                   
+let bigInt = 1234567890123456789012345678901234567890n;
+let bool = true;                
+let undef;                      
+let nul = null;                 
+let sym = Symbol("id");         
+let obj = {name: "Maria"};      
+let arr = [1, 2, 3];            
+let func = function() {};       
+
+console.log("str:", typeof str);       
+console.log("num:", typeof num);       
+console.log("bigInt:", typeof bigInt); 
+console.log("bool:", typeof bool);     
+console.log("undef:", typeof undef);   
+console.log("nul:", typeof nul);       
+console.log("sym:", typeof sym);       
+console.log("obj:", typeof obj);       
+console.log("arr:", typeof arr);       
+console.log("func:", typeof func);
