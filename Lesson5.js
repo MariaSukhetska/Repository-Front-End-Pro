@@ -71,10 +71,10 @@ let evenCount = 0;
 let evenSum = 0;
 for (let i = 1; i <= number; i++) {
     if (number % i === 0) {
-    console.log(i);
+    console.log(i); // тут буде вивід дільника
     if (i % 2 === 0) {
-        evenCount++;
-        evenSum += i;
+        evenCount = evenCount + 1; //рахуємо парний дільник
+        evenSum = evenSum + i;     //додаємо до суми
     }
     }
 }
