@@ -1,4 +1,5 @@
 let arr = [16, -37, 54, -4, 72, -56, 47, 4, -16, 25, -37, 46, 4, -51, 27, -63, 4, -54, 76, -4, 12, -35, 4, 47];
+
 // Змінні
 let positiveSum = 0;
 let positiveCount = 0;
@@ -15,33 +16,37 @@ let oddPositiveSum = 0;
 
 // Обробка масиву
 for (let i = 0; i < arr.length; i++) {
-let el = arr[i];
+    let el = arr[i];
 
-if (el > 0) {
-    positiveSum += el;
-    positiveCount++;
-    positiveProduct *= el;
+    if (el > 0) {
+        positiveSum += el;
+        positiveCount++;
+        positiveProduct *= el;
 
-    if (el % 2 === 0) {
-    evenPositiveCount++;
-    evenPositiveSum += el;
-    } else {
-    oddPositiveCount++;
-    oddPositiveSum += el;
+        if (el % 2 === 0) {
+            evenPositiveCount++;
+            evenPositiveSum += el;
+        } else {
+            oddPositiveCount++;
+            oddPositiveSum += el;
+        }
+    }
+
+    if (el < 0) {
+        negativeCount++;
+    }
+
+    if (el < min) {
+        min = el;
+        minIndex = i;
+    }
+
+    if (el > max) {
+        max = el;
+        maxIndex = i;
     }
 }
-if (el < 0) {
-    negativeCount++;
-}
-if (el < min) {
-    min = el;
-    minIndex = i;
-}
-if (el > max) {
-    max = el;
-    maxIndex = i;
-}
-}
+
 // Вивід результатів
 console.log("Сума додатних елементів:", positiveSum);
 console.log("Кількість додатних елементів:", positiveCount);
@@ -56,8 +61,9 @@ console.log("Сума непарних додатних елементів:", od
 
 // Заміна всіх елементів на 0, крім найбільшого
 for (let i = 0; i < arr.length; i++) {
-if (i !== maxIndex) {
-    arr[i] = 0;
+    if (i !== maxIndex) {
+        arr[i] = 0;
+    }
 }
-}
+
 console.log("Масив після заміни всіх елементів на 0, крім найбільшого:", arr);
