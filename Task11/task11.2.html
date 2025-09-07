@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+    <meta charset="utf-8">
+    <title>DOM & Events: Зміна кольору тексту</title>
+    <style>
+        #textBlock {
+            font-size: 24px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="textBlock">Цей текст змінює колір при кліку на кнопку</p>
+    <button id="toggleBtn">Змінити колір</button>
+
+    <script>
+        const textBlock = document.getElementById("textBlock");
+        const button = document.getElementById("toggleBtn");
+
+        let isBlack = true;
+
+        button.addEventListener("click", () => {
+            if (isBlack) {
+                textBlock.style.color = "red";  
+            } else {
+                textBlock.style.color = "black"; 
+            }
+            isBlack = !isBlack; 
+        });
+    </script>
+</body>
+
+</html>
