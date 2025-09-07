@@ -4,7 +4,6 @@ const user = {
     location: "Kyiv",
     email: "anton@example.com",
 
-    // метод для отримання та відображення даних
     getInfo: function () {
         console.log(`Name: ${this.name}`);
         console.log(`Age: ${this.age}`);
@@ -13,5 +12,4 @@ const user = {
     }
 };
 
-// Виклик методу
 user.getInfo();
