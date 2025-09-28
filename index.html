@@ -1,35 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Data types in JavaScript</title>
-</head>
-<body>
-    <h1>JavaScript Data Types</h1>
-    <script>
-        // Examples all Data types in JavaScript:
-        let str = "Maria";             // string
-        let num = 23;                   // number
-        let bigInt = 1234567890123456789012345678901234567890n; // bigint
-        let bool = true;                // boolean
-        let undef;                      // undefined 
-        let nul = null;                 // null
-        let sym = Symbol("id");         // symbol
-        let obj = {name: "Maria"};      // object
-        let arr = [1, 2, 3];            // object 
-        let func = function() {};       // function 
+<!doctype html>
+<html lang="uk">
 
-        // Enter types in console
-        console.log("str:", typeof str);       // string
-        console.log("num:", typeof num);       // number
-        console.log("bigInt:", typeof bigInt); // bigint
-        console.log("bool:", typeof bool);     // boolean
-        console.log("undef:", typeof undef);   // undefined
-        console.log("nul:", typeof nul);       // object 
-        console.log("sym:", typeof sym);       // symbol
-        console.log("obj:", typeof obj);       // object
-        console.log("arr:", typeof arr);       // object
-        console.log("func:", typeof func);     // function
-    </script>
+<head>
+    <meta charset="utf-8" />
+    <title>Форма з валідацією</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 640px;
+            margin: 24px auto;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 4px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+        }
+
+        .error {
+            color: #b00020;
+            font-size: 12px;
+            margin-top: -8px;
+            margin-bottom: 8px;
+        }
+
+        button {
+            width: fit-content;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>We would like to help you</h2>
+
+    <form id="contactForm" novalidate>
+        <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" />
+            <div id="err-name" class="error"></div>
+        </div>
+
+        <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+            <div id="err-message" class="error"></div>
+        </div>
+
+        <div>
+            <label for="phone">Phone number</label>
+            <input id="phone" name="phone" type="tel" placeholder="+380XXXXXXXXX" />
+            <div id="err-phone" class="error"></div>
+        </div>
+
+        <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" />
+            <div id="err-email" class="error"></div>
+        </div>
+
+        <button type="submit">Send message</button>
+    </form>
+
+    <script src="task13.1.js" defer></script>
 </body>
+
 </html>
