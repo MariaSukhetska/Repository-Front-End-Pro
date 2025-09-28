@@ -15,7 +15,7 @@ setLinkBtn.addEventListener("click", () => {
 
 goLinkBtn.addEventListener("click", () => {
     if (savedLink) {
-        window.location.href = savedLink; // переадресація
+        window.location.href = savedLink;
     } else {
         alert("Спочатку введіть посилання!");
     }

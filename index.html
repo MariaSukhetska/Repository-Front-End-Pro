@@ -3,14 +3,30 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Переадресація</title>
+    <title>Event Delegation</title>
+    <style>
+        #buttons-container {
+            display: flex;
+            gap: 10px;
+            margin: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 
 <body>
-    <button id="setLinkBtn">Ввести посилання</button>
-    <button id="goLinkBtn">Перейти за посиланням</button>
 
-    <script src="task12.1.js" defer></script>
+    <div id="buttons-container">
+        <button>Кнопка 1</button>
+        <button>Кнопка 2</button>
+        <button>Кнопка 3</button>
+    </div>
+
+    <script src="task12.2.js" defer></script>
 </body>
 
 </html>
