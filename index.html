@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>TODO + Delegation</title>
+    <title>Форма з валідацією</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,67 +11,75 @@
             margin: 24px auto;
         }
 
-        #controls {
+        form {
             display: flex;
-            gap: 8px;
-            margin-bottom: 16px;
-        }
-
-        #taskInput {
-            flex: 1;
-            padding: 8px;
-        }
-
-        #addBtn {
-            padding: 8px 14px;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        li {
-            display: flex;
-            align-items: center;
+            flex-direction: column;
             gap: 12px;
-            margin: 6px 0;
         }
 
-        .title {
-            flex: 1;
+        label {
+            display: block;
+            margin-bottom: 4px;
+            font-weight: bold;
         }
 
-        .del {
-            padding: 4px 10px;
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+        }
+
+        .error {
+            color: #b00020;
+            font-size: 12px;
+            margin-top: -8px;
+            margin-bottom: 8px;
+        }
+
+        button {
+            width: fit-content;
+            padding: 8px 16px;
+            border-radius: 4px;
             cursor: pointer;
         }
     </style>
 </head>
 
 <body>
-    <h2>Список завдань</h2>
 
-    <div id="controls">
-        <input id="taskInput" type="text" placeholder="Нове завдання..." />
-        <button id="addBtn">Додати</button>
-    </div>
+    <h2>We would like to help you</h2>
 
-    <ul id="todoList">
-        <li>
-            <span class="title">Завдання 1</span>
-            <button class="del" data-action="delete">Видалити</button>
-        </li>
-        <li>
-            <span class="title">Завдання 2</span>
-            <button class="del" data-action="delete">Видалити</button>
-        </li>
-        <li>
-            <span class="title">Завдання 3</span>
-            <button class="del" data-action="delete">Видалити</button>
-        </li>
-    </ul>
+    <form id="contactForm" novalidate>
+        <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" />
+            <div id="err-name" class="error"></div>
+        </div>
 
-    <script src="task12.3.js" defer></script>
+        <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+            <div id="err-message" class="error"></div>
+        </div>
+
+        <div>
+            <label for="phone">Phone number</label>
+            <input id="phone" name="phone" type="tel" placeholder="+380XXXXXXXXX" />
+            <div id="err-phone" class="error"></div>
+        </div>
+
+        <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" />
+            <div id="err-email" class="error"></div>
+        </div>
+
+        <button type="submit">Send message</button>
+    </form>
+
+    <script src="task13.1.js" defer></script>
 </body>
 
 </html>
