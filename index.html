@@ -2,31 +2,76 @@
 <html lang="uk">
 
 <head>
-    <meta charset="utf-8">
-    <title>Event Delegation</title>
+    <meta charset="utf-8" />
+    <title>TODO + Delegation</title>
     <style>
-        #buttons-container {
-            display: flex;
-            gap: 10px;
-            margin: 20px;
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 640px;
+            margin: 24px auto;
         }
 
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
+        #controls {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        #taskInput {
+            flex: 1;
+            padding: 8px;
+        }
+
+        #addBtn {
+            padding: 8px 14px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 6px 0;
+        }
+
+        .title {
+            flex: 1;
+        }
+
+        .del {
+            padding: 4px 10px;
+            cursor: pointer;
         }
     </style>
 </head>
 
 <body>
+    <h2>Список завдань</h2>
 
-    <div id="buttons-container">
-        <button>Кнопка 1</button>
-        <button>Кнопка 2</button>
-        <button>Кнопка 3</button>
+    <div id="controls">
+        <input id="taskInput" type="text" placeholder="Нове завдання..." />
+        <button id="addBtn">Додати</button>
     </div>
 
-    <script src="task12.2.js" defer></script>
+    <ul id="todoList">
+        <li>
+            <span class="title">Завдання 1</span>
+            <button class="del" data-action="delete">Видалити</button>
+        </li>
+        <li>
+            <span class="title">Завдання 2</span>
+            <button class="del" data-action="delete">Видалити</button>
+        </li>
+        <li>
+            <span class="title">Завдання 3</span>
+            <button class="del" data-action="delete">Видалити</button>
+        </li>
+    </ul>
+
+    <script src="task12.3.js" defer></script>
 </body>
 
 </html>
