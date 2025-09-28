@@ -1,34 +1,22 @@
 <!doctype html>
 <html lang="uk">
+
 <head>
-    <meta charset="utf-8" />
-    <title>Таблиця Піфагора 10×10</title>
+    <meta charset="utf-8">
+    <title>DOM & Events: Зміна кольору тексту</title>
     <style>
-        table {
-            border-collapse: collapse;
-            margin: 20px;
-        }
-
-        td,
-        th {
-            border: 1px solid #ccc;
-            padding: 6px 10px;
-            text-align: right;
-        }
-
-        thead th {
-            background: #f3f3f3;
-        }
-
-        tbody th {
-            background: #fafafa;
-            text-align: center;
+        #textBlock {
+            font-size: 24px;
+            color: black;
         }
     </style>
 </head>
-<body>
-    <div id="app"></div>
 
-    <script src="task11.1.js"></script>
+<body>
+    <p id="textBlock">Цей текст змінює колір при кліку на кнопку</p>
+    <button id="toggleBtn">Змінити колір</button>
+
+    <script src="task11.2.js"></script>
 </body>
+
 </html>
