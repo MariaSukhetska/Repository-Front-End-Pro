@@ -1,35 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Data types in JavaScript</title>
-</head>
-<body>
-    <h1>JavaScript Data Types</h1>
-    <script>
-        // Examples all Data types in JavaScript:
-        let str = "Maria";             // string
-        let num = 23;                   // number
-        let bigInt = 1234567890123456789012345678901234567890n; // bigint
-        let bool = true;                // boolean
-        let undef;                      // undefined 
-        let nul = null;                 // null
-        let sym = Symbol("id");         // symbol
-        let obj = {name: "Maria"};      // object
-        let arr = [1, 2, 3];            // object 
-        let func = function() {};       // function 
+<!doctype html>
+<html lang="uk">
 
-        // Enter types in console
-        console.log("str:", typeof str);       // string
-        console.log("num:", typeof num);       // number
-        console.log("bigInt:", typeof bigInt); // bigint
-        console.log("bool:", typeof bool);     // boolean
-        console.log("undef:", typeof undef);   // undefined
-        console.log("nul:", typeof nul);       // object 
-        console.log("sym:", typeof sym);       // symbol
-        console.log("obj:", typeof obj);       // object
-        console.log("arr:", typeof arr);       // object
-        console.log("func:", typeof func);     // function
-    </script>
+<head>
+    <meta charset="utf-8">
+    <title>Event Delegation</title>
+    <style>
+        #buttons-container {
+            display: flex;
+            gap: 10px;
+            margin: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="buttons-container">
+        <button>Кнопка 1</button>
+        <button>Кнопка 2</button>
+        <button>Кнопка 3</button>
+    </div>
+
+    <script src="task12.2.js" defer></script>
 </body>
+
 </html>
